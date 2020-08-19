@@ -1,0 +1,85 @@
+{
+  "name": "react-multilevel-dropdown",
+  "version": "1.0.0",
+  "author": "Kontentino",
+  "description": "ReactJS multilevel dropdown component",
+  "private": false,
+  "main": "index.js",
+  "keywords": [
+    "reactjs",
+    "react",
+    "bitly",
+    "input",
+    "react field",
+    "url",
+    "shortener",
+    "bitly field",
+    "bitly react"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kontentino/react-multilevel-dropdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kontentino/react-multilevel-dropdown/issues"
+  },
+  "dependencies": {
+    "react-style-classes": "^2.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-scripts": "3.4.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rm -rf build && NODE_ENV=production babel src --out-dir build --copy-files && babel package.json -d build --copy-files",
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "deploy": "cd build && npm publish",
+    "lint": "eslint src/components/**/*.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.3.13",
+    "@storybook/addon-docs": "^5.3.17",
+    "@storybook/addon-links": "^5.3.13",
+    "@storybook/addons": "^5.3.13",
+    "@storybook/preset-create-react-app": "^1.5.2",
+    "@storybook/react": "^5.3.13",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.1",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "jest": "^25.1.0",
+    "jest-css-modules-transform": "^4.0.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.13.0",
+    "sass-loader": "^8.0.2"
+  }
+}
