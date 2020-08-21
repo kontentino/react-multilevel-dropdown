@@ -54,6 +54,9 @@ import Dropdown from 'react-multilevel-dropdown';
 |title|String|null|
 |isDisabled|Boolean|false|
 |position|String - 'left' or 'right'|'left'|
+|wrapperClassName|String|null|
+|buttonClassName|String|null|
+|menuClassName|String|null|
 
 #### Item
 | NAME | TYPE | DEFAULT VALUE |
@@ -61,9 +64,11 @@ import Dropdown from 'react-multilevel-dropdown';
 |children|node|null|
 |onClick|Function|() => null|
 |isActive|Boolean|false|
+|className|String|null|
 
 #### Submenu
 | NAME | TYPE | DEFAULT VALUE |
 |:-------------|:-------------|:-------------|
 |children|node|null|
 |position|String - 'left' or 'right'|'left'|
+|className|String|null|
