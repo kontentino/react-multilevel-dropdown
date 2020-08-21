@@ -2,6 +2,8 @@
 # react-multilevel-dropdown by Kontentino
 ReactJS multilevel dropdown component
 
+![React multilevel dropdown](https://github.com/kontentino/react-multilevel-dropdown/blob/master/src/img/example.png?raw=true)
+
 ## Install
 `npm install react-multilevel-dropdown`
 
