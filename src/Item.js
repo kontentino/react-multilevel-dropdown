@@ -8,6 +8,7 @@ const Item = (props) => (
     className={classes(
       style.item,
       props.isActive && style.active,
+      props.className,
     )}
     onClick={props.onClick}
     tabIndex={0}
@@ -20,12 +21,14 @@ Item.propTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func,
   isActive: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 Item.defaultProps = {
   children: null,
   onClick: () => null,
   isActive: false,
+  className: null,
 };
 
 export default Item;

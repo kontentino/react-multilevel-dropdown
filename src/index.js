@@ -26,7 +26,7 @@ const Dropdown = (props) => {
   }, []);
 
   const handleButtonOnClick = () => {
-    if (props.UIDropdownisDisabled) {
+    if (props.isDisabled) {
       return;
     }
 
@@ -35,7 +35,7 @@ const Dropdown = (props) => {
 
   return (
     <div
-      className={style.dropdown}
+      className={classes(style.dropdown, props.wrapperClassName)}
       ref={dropdownRef}
     >
       <button
@@ -43,7 +43,8 @@ const Dropdown = (props) => {
         className={classes(
           style.button,
           isOpen && style.active,
-          props.isDisabled && style.disabled
+          props.isDisabled && style.disabled,
+          props.buttonClassName,
         )}
         disabled={props.isDisabled}
         tabIndex={0}
@@ -55,6 +56,7 @@ const Dropdown = (props) => {
         <div className={classes(
           style.menu,
           props.position === 'right' && style.menuRight,
+          props.menuClassName,
         )}>
           <ul>
             {props.children}
@@ -70,6 +72,9 @@ Dropdown.propTypes = {
   children: PropTypes.node,
   isDisabled: PropTypes.bool,
   position: PropTypes.oneOf(['left', 'right']),
+  wrapperClassName: PropTypes.string,
+  buttonClassName: PropTypes.string,
+  menuClassName: PropTypes.string,
 };
 
 Dropdown.defaultProps = {
@@ -77,6 +82,9 @@ Dropdown.defaultProps = {
   isDisabled: false,
   title: null,
   position: 'left',
+  wrapperClassName: PropTypes.string,
+  buttonClassName: PropTypes.string,
+  menuClassName: PropTypes.string,
 };
 
 Dropdown.Item = Item;
