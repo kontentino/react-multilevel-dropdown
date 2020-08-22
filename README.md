@@ -4,7 +4,7 @@ ReactJS multilevel dropdown component
 
 [![npm](https://img.shields.io/npm/v/react-multilevel-dropdown?style=plastic)](https://www.npmjs.com/package/react-multilevel-dropdown)
 [![NPM](https://img.shields.io/npm/l/react-multilevel-dropdown)](https://github.com/kontentino/react-multilevel-dropdown/blob/master/LICENSE)
-[![NPM](https://img.shields.io/npm/dw/react-multilevel-dropdown?style=plastic)](https://www.npmjs.com/package/react-multilevel-dropdown)
+[![NPM](https://img.shields.io/npm/dy/react-multilevel-dropdown?style=plastic)](https://www.npmjs.com/package/react-multilevel-dropdown)
 
 ![React multilevel dropdown](https://github.com/kontentino/react-multilevel-dropdown/blob/master/src/img/example.png?raw=true)
 
