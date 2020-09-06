@@ -82,9 +82,9 @@ Dropdown.defaultProps = {
   isDisabled: false,
   title: null,
   position: 'left',
-  wrapperClassName: PropTypes.string,
-  buttonClassName: PropTypes.string,
-  menuClassName: PropTypes.string,
+  wrapperClassName: null,
+  buttonClassName: null,
+  menuClassName: null,
 };
 
 Dropdown.Item = Item;
