@@ -6,8 +6,18 @@ import PropTypes from 'prop-types';
 import classes from 'react-style-classes';
 import Item from './Item';
 import Submenu from './Submenu';
+import Divider from './Divider';
 
-const Dropdown = (props) => {
+const Dropdown = ({
+  title,
+  children,
+  isDisabled,
+  position,
+  wrapperClassName,
+  buttonClassName,
+  menuClassName,
+  ...props
+}) => {
   const [isOpen, setOpen] = useState(false);
   const dropdownRef = useRef();
 
@@ -26,7 +36,7 @@ const Dropdown = (props) => {
   }, []);
 
   const handleButtonOnClick = () => {
-    if (props.isDisabled) {
+    if (isDisabled) {
       return;
     }
 
@@ -35,7 +45,7 @@ const Dropdown = (props) => {
 
   return (
     <div
-      className={classes(style.dropdown, props.wrapperClassName)}
+      className={classes(style.dropdown, wrapperClassName)}
       ref={dropdownRef}
     >
       <button
@@ -43,23 +53,24 @@ const Dropdown = (props) => {
         className={classes(
           style.button,
           isOpen && style.active,
-          props.isDisabled && style.disabled,
-          props.buttonClassName,
+          isDisabled && style.disabled,
+          buttonClassName,
         )}
-        disabled={props.isDisabled}
+        disabled={isDisabled}
         tabIndex={0}
         onClick={handleButtonOnClick}
+        {...props}
       >
-        {props.title}
+        {title}
       </button>
       {isOpen && (
         <div className={classes(
           style.menu,
-          props.position === 'right' && style.menuRight,
-          props.menuClassName,
+          position === 'right' && style.menuRight,
+          menuClassName,
         )}>
           <ul>
-            {props.children}
+            {children}
           </ul>
         </div>
       )}
@@ -89,5 +100,6 @@ Dropdown.defaultProps = {
 
 Dropdown.Item = Item;
 Dropdown.Submenu = Submenu;
+Dropdown.Divider = Divider;
 
 export default Dropdown;

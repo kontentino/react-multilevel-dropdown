@@ -3,17 +3,24 @@ import PropTypes from 'prop-types';
 import style from './Item.module.css';
 import classes from 'react-style-classes';
 
-const Item = (props) => (
+const Item = ({
+  children,
+  onClick,
+  isActive,
+  className,
+  ...props
+}) => (
   <li
     className={classes(
       style.item,
-      props.isActive && style.active,
-      props.className,
+      isActive && style.active,
+      className,
     )}
-    onClick={props.onClick}
+    onClick={onClick}
     tabIndex={0}
+    {...props}
   >
-    {props.children}
+    {children}
   </li>
 );
 
