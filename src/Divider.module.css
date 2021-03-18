@@ -1,0 +1,15 @@
+.divider {
+  height: 1px;
+  background-color: EBECF0;
+  pointer-events: none;
+  padding: 0;
+  margin: 4px 0;  
+}
+
+.sm {
+  margin: 2px 0;
+}
+
+.lg {
+  margin: 8px 0;
+}
