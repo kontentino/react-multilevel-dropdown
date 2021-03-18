@@ -8,7 +8,7 @@ import Item from './Item';
 import Submenu from './Submenu';
 import Divider from './Divider';
 
-const Dropdown = ({
+const Dropdown = React.forwardRef(({
   title,
   children,
   isDisabled,
@@ -17,7 +17,7 @@ const Dropdown = ({
   buttonClassName,
   menuClassName,
   ...props
-}) => {
+}, ref) => {
   const [isOpen, setOpen] = useState(false);
   const dropdownRef = useRef();
 
@@ -49,6 +49,7 @@ const Dropdown = ({
       ref={dropdownRef}
     >
       <button
+        ref={ref}
         type='button'
         className={classes(
           style.button,
@@ -76,7 +77,7 @@ const Dropdown = ({
       )}
     </div>
   );
-};
+});
 
 Dropdown.propTypes = {
   title: PropTypes.any,
