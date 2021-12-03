@@ -1,5 +1,5 @@
 declare module "react-multilevel-dropdown" {
-  import { ReactNode, FC, Ref } from "react";
+  import { ReactNode, FC } from "react";
 
   type AnyFunction = (...e: any) => any
 
