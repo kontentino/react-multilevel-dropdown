@@ -45,53 +45,53 @@ const Dropdown = forwardRef(({
 
     onClick(e);
 
+    setOpen(!isOpen);
+
     if (isOpen) {
       document.removeEventListener('mousedown', handleClick);
     } else {
       document.addEventListener('mousedown', handleClick);
     }
-
-    setOpen(!isOpen);
   };
 
   useImperativeHandle(ref, () => ({
     dropdownRef,
-    open: handleButtonOnClick,
+    toggle: handleButtonOnClick,
   }));
 
   return (
-    <div
-      className={classes(style.dropdown, wrapperClassName)}
-      ref={dropdownRef}
-    >
-      <button
-        type='button'
-        className={classes(
-          style.button,
-          (isOpen || isActive) && style.active,
-          isDisabled && style.disabled,
-          buttonVariant && style[`button-${buttonVariant}`],
-          buttonClassName,
-        )}
-        disabled={isDisabled}
-        tabIndex={0}
-        onClick={handleButtonOnClick}
-        {...props}
-      >
-        {title}
-      </button>
-      {isOpen && (
-        <div className={classes(
-          style.menu,
-          style[`menu-${position}`],
-          menuClassName,
-        )}>
-          <ul>
-            {children}
-          </ul>
+        <div
+            className={classes(style.dropdown, wrapperClassName)}
+            ref={dropdownRef}
+        >
+            <button
+                type='button'
+                className={classes(
+                  style.button,
+                  (isOpen || isActive) && style.active,
+                  isDisabled && style.disabled,
+                  buttonVariant && style[`button-${buttonVariant}`],
+                  buttonClassName,
+                )}
+                disabled={isDisabled}
+                tabIndex={0}
+                onClick={handleButtonOnClick}
+                {...props}
+            >
+                {title}
+            </button>
+            {isOpen && (
+                <div className={classes(
+                  style.menu,
+                  style[`menu-${position}`],
+                  menuClassName,
+                )}>
+                    <ul>
+                        {children}
+                    </ul>
+                </div>
+            )}
         </div>
-      )}
-    </div>
   );
 });
 
