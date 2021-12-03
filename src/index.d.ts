@@ -1,7 +1,7 @@
 declare module 'react-multilevel-dropdown' {
   import { FC } from 'react';
 
-  export const Dropdown: FC<{
+  const Dropdown: FC<{
     title?: any;
     children?: any;
     isDisabled?: boolean;
@@ -25,4 +25,6 @@ declare module 'react-multilevel-dropdown' {
       className?: string | null;
     }>;
   };
+
+  export default Dropdown;
 }
