@@ -20,6 +20,7 @@ declare module "react-multilevel-dropdown" {
     menuClassName?: string;
     buttonClassName?: string;
     onClick?: (x?: any) => any | null;
+    openOnHover?: boolean
   }> & {
     Submenu: FC<{
       children?: ReactNode | ReactNode[];
