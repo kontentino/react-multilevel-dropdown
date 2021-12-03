@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './Item.module.css';
 import classes from 'react-style-classes';
+import style from './Item.module.css';
 
 const Item = ({
   children,
@@ -10,18 +10,18 @@ const Item = ({
   className,
   ...props
 }) => (
-  <li
-    className={classes(
-      style.item,
-      isActive && style.active,
-      className,
-    )}
-    onClick={onClick}
-    tabIndex={0}
-    {...props}
-  >
-    {children}
-  </li>
+    <li
+        className={classes(
+          style.item,
+          isActive && style.active,
+          className,
+        )}
+        onClick={onClick}
+        tabIndex={0}
+        {...props}
+    >
+        {children}
+    </li>
 );
 
 Item.propTypes = {

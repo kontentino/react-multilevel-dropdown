@@ -28,6 +28,9 @@
   "dependencies": {
     "react-style-classes": "^2.0.2"
   },
+  "resolutions": {
+    "babel-loader": "8.1.0"
+  },
   "peerDependencies": {
     "react": "^16.12.0",
     "react-scripts": "3.4.0",
@@ -80,6 +83,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-scripts": "^4.0.3",
     "react-test-renderer": "^16.13.0",
     "sass-loader": "^8.0.2"
   }
