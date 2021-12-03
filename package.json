@@ -46,7 +46,7 @@
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
     "build-storybook": "build-storybook",
-    "deploy": "cd build && npm publish --access public",
+    "deploy": "cd build && npm publish",
     "lint": "eslint src/components/**/*.js"
   },
   "eslintConfig": {
