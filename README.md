@@ -13,6 +13,9 @@ ReactJS multilevel dropdown component
 
 **NPM:** [npmjs.com/package/react-multilevel-dropdown](https://www.npmjs.com/package/react-multilevel-dropdown)
 
+## Development / testing
+`npm run storybook`
+
 ## Usage
 ```javascript
 import Dropdown from 'react-multilevel-dropdown';
