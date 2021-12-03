@@ -1,28 +1,29 @@
 .item {
-  position: relative;
-  font-size: 14px;
-  line-height: 1.4;
-  padding: 8px 12px;
-  cursor: pointer;
-  user-select: none;
-  outline: none;
-  transition: all 160ms ease-out;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 8px 12px;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: all 160ms ease-out;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    color: #172B4D;
 }
 
 .item:hover {
-  background-color: #EEF3FF;
-  color: #2C5DE5;
+    background-color: #EEF3FF;
+    color: #2C5DE5;
 }
 
 .item:hover > div {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .active {
-  background-color: #EEF3FF;
-  color: #2C5DE5 !important;
+    background-color: #EEF3FF;
+    color: #2C5DE5 !important;
 }
