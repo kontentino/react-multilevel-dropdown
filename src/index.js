@@ -58,6 +58,7 @@ const Dropdown = forwardRef(({
   useImperativeHandle(ref, () => ({
     dropdownRef,
     toggle: handleButtonOnClick,
+    isOpen,
   }));
 
   return (
