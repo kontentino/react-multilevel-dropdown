@@ -37,8 +37,10 @@ const Dropdown = forwardRef(({
   }, []);
 
   const handleButtonOnClick = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
 
     if (isDisabled) {
       return;
