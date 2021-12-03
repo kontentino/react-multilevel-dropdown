@@ -5,6 +5,7 @@
   "description": "ReactJS multilevel dropdown component",
   "private": false,
   "main": "index.js",
+  "homepage": "https://kontentino.github.io/react-multilevel-dropdown",
   "keywords": [
     "reactjs",
     "react",
@@ -42,7 +43,9 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook",
     "deploy": "cd build && npm publish",
     "lint": "eslint src/components/**/*.js"
   },
