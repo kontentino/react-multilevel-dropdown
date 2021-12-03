@@ -19,6 +19,7 @@ const Dropdown = forwardRef(({
   onClick,
   isActive,
   buttonVariant,
+  openOnHover,
   ...props
 }, ref) => {
   const [isOpen, setOpen] = useState(false);
@@ -75,7 +76,8 @@ const Dropdown = forwardRef(({
                 )}
                 disabled={isDisabled}
                 tabIndex={0}
-                onClick={handleButtonOnClick}
+                onClick={!openOnHover ? handleButtonOnClick : undefined}
+                onMouseOver={openOnHover ? handleButtonOnClick : undefined}
                 {...props}
             >
                 {title}
@@ -108,6 +110,7 @@ Dropdown.propTypes = {
   buttonClassName: PropTypes.string,
   menuClassName: PropTypes.string,
   onClick: PropTypes.func,
+  openOnHover: PropTypes.bool,
 };
 
 Dropdown.defaultProps = {
@@ -121,6 +124,7 @@ Dropdown.defaultProps = {
   buttonClassName: null,
   menuClassName: null,
   onClick: () => null,
+  openOnHover: false,
 };
 
 Dropdown.Item = Item;
