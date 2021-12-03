@@ -17,6 +17,27 @@
   margin-bottom: 12px;
 }
 
-.submenuRight {
+.left {
+  top: -5px;
+  right: 98%;
+}
+
+.right {
+  top: -5px;
   left: 98%;
+}
+
+.bottom {
+  top: 100%;
+  left: 0;
+}
+
+.right-top {
+  bottom: -5px;
+  left: 98%;
+}
+
+.left-top {
+  bottom: -5px;
+  right: 98%;
 }
