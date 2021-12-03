@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import UIDropdown from './index';
 
 export default {
-  title: 'Dropdown Usage examples',
+  title: 'Dropdown Usages',
 };
 
 
