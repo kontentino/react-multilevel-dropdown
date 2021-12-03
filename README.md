@@ -46,29 +46,29 @@ import Dropdown from 'react-multilevel-dropdown';
 #### Dropdown
 | NAME | TYPE | DEFAULT VALUE |
 |:-------------|:-------------|:-------------|
-|children|`ReactNode | ReactNode[]`|`null`|
-|title|`ReactNode | ReactNode[]`|`null`|
-|isDisabled|`boolean`|`false`|
-|position|`"left" | "right" | "top-right" | "top-left"`|`left`|
-|buttonVariant|`"primary"| "secondary"| "tertiary"| "special"| "special-success"| "dashed"`|`secondary`|
-|isActive|`boolean`|`false`|
-|wrapperClassName|`string`|`null`|
-|buttonClassName|`string`|`null`|
-|menuClassName|`string`|`null`|
-|onClick|`(x?: any) => any | null`|`() => null`|
+|children|ReactNode | ReactNode[]|null|
+|title|ReactNode | ReactNode[]|null|
+|isDisabled|boolean|false|
+|position|"left" | "right" | "top-right" | "top-left"|left|
+|buttonVariant|"primary"| "secondary"| "tertiary"| "special"| "special-success"| "dashed"|secondary|
+|isActive|boolean|false|
+|wrapperClassName|string|null|
+|buttonClassName|string|null|
+|menuClassName|string|null|
+|onClick|(x?: any) => any | null|() => null|
 
 #### Item
 | NAME | TYPE | DEFAULT VALUE |
 |:-------------|:-------------|:-------------|
-|children|`ReactNode | ReactNode[]`|`null`|
-|onClick|`(x?: any) => any | null`|`() => null`|
-|isActive|`boolean`|`false`|
-|className|`string`|`null`|
-|isDisabled|`boolean`|`false`| 
+|children|ReactNode | ReactNode[]|null|
+|onClick|(x?: any) => any | null|() => null|
+|isActive|boolean|false|
+|className|string|null|
+|isDisabled|boolean|false| 
 
 #### Submenu
 | NAME | TYPE | DEFAULT VALUE |
 |:-------------|:-------------|:-------------|
-|children|`ReactNode | ReactNode[]`|`null`|
-|position|`"left" | "right" | "bottom" | "left-top" | "right-top"`|`left`|
-|className|`string`|`null`|
+|children|ReactNode | ReactNode[]|null|
+|position|"left" | "right" | "bottom" | "left-top" | "right-top"|left|
+|className|string|null|
