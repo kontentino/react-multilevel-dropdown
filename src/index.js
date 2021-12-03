@@ -1,9 +1,9 @@
 import React, {
   useState, useRef, useEffect, useCallback, useImperativeHandle, forwardRef,
 } from 'react';
-import style from './Dropdown.module.scss';
 import PropTypes from 'prop-types';
 import classes from 'react-style-classes';
+import style from './Dropdown.module.scss';
 import Item from './Item';
 import Submenu from './Submenu';
 import Divider from './Divider';
@@ -16,6 +16,9 @@ const Dropdown = forwardRef(({
   wrapperClassName,
   buttonClassName,
   menuClassName,
+  onClick,
+  isActive,
+  buttonVariant,
   ...props
 }, ref) => {
   const [isOpen, setOpen] = useState(false);
