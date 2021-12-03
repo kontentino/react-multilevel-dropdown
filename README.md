@@ -73,5 +73,5 @@ import Dropdown from 'react-multilevel-dropdown';
 | NAME | TYPE | DEFAULT VALUE |
 |:-------------|:-------------|:-------------|
 |children|ReactNode | ReactNode[]|null|
-|position|"left" | "right" | "bottom" | "left-top" | "right-top"|left|
+|position|"left", "right", "bottom", "left-top", "right-top"|left|
 |className|string|null|
