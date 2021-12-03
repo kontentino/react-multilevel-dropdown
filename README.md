@@ -16,10 +16,9 @@ ReactJS multilevel dropdown component
 ## Development / testing
 `npm run storybook`
 
-## Usage
+## Usage / Example
 ```javascript
 import Dropdown from 'react-multilevel-dropdown';
-
 ...
 
 <Dropdown
@@ -36,13 +35,7 @@ import Dropdown from 'react-multilevel-dropdown';
       <Dropdown.Item>
         Subitem 1
       </Dropdown.Item>
-      <Dropdown.Item>
-        Subitem 2
-      </Dropdown.Item>
     </Dropdown.Submenu>
-  </Dropdown.Item>
-  <Dropdown.Item>
-    Item 3
   </Dropdown.Item>
 </Dropdown>
 ```
