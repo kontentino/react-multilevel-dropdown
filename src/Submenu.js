@@ -6,21 +6,23 @@ import style from './Submenu.module.css';
 const Submenu = ({
   children, position, className, ...props
 }) => (
-    <div className={classes(
+  <div
+    className={classes(
       style.submenu,
-      position === 'right' && style.submenuRight,
+      style[position],
       className,
-      { ...props },
-    )}>
-        <ul>
-            {children}
-        </ul>
-    </div>
+    )}
+    {...props}
+  >
+    <ul>
+      {children}
+    </ul>
+  </div>
 );
 
 Submenu.propTypes = {
   children: PropTypes.node,
-  position: PropTypes.oneOf(['left', 'right']),
+  position: PropTypes.oneOf(['left', 'right', 'bottom', 'left-top', 'right-top']),
   className: PropTypes.string,
 };
 

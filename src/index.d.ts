@@ -1,5 +1,5 @@
 declare module "react-multilevel-dropdown" {
-  import { ReactNode, FC } from 'react';
+  import { ReactNode, FC } from "react";
 
   const Dropdown: FC<{
     title?: ReactNode | ReactNode[];
@@ -17,23 +17,22 @@ declare module "react-multilevel-dropdown" {
     wrapperClassName?: string;
     menuClassName?: string;
     buttonClassName?: string;
-    dataName?: string;
     onClick?: (x?: any) => any | null;
-    buttonHtmlAttributes?: Record<any, any> | null;
   }> & {
     Submenu: FC<{
-      children?: any;
-      position?: "left" | "right";
-      className?: string | null;
+      children?: ReactNode | ReactNode[];
+      position?: "left" | "right" | "bottom" | "left-top" | "right-top";
+      className?: string;
     }>;
     Divider: FC<{
       size?: "sm" | "lg";
     }>;
     Item: FC<{
-      children?: any;
-      onClick?: () => void;
+      children?: ReactNode | ReactNode[];
+      onClick?: AnyFunction | null;
       isActive?: boolean;
-      className?: string | null;
+      className?: string;
+      isDisabled?: boolean;
     }>;
   };
 

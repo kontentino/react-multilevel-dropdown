@@ -4,24 +4,21 @@ import classes from 'react-style-classes';
 import style from './Item.module.css';
 
 const Item = ({
-  children,
-  onClick,
-  isActive,
-  className,
-  ...props
+  children, onClick, isActive, className, isDisabled, ...props
 }) => (
-    <li
-        className={classes(
-          style.item,
-          isActive && style.active,
-          className,
-        )}
-        onClick={onClick}
-        tabIndex={0}
-        {...props}
-    >
-        {children}
-    </li>
+  <li
+    className={classes(
+      style.item,
+      isActive && style.active,
+      className,
+      isDisabled && style.disabled,
+    )}
+    onClick={isDisabled ? () => null : onClick}
+    tabIndex={0}
+    {...props}
+  >
+    {children}
+  </li>
 );
 
 Item.propTypes = {
@@ -29,6 +26,7 @@ Item.propTypes = {
   onClick: PropTypes.func,
   isActive: PropTypes.bool,
   className: PropTypes.string,
+  isDisabled: PropTypes.bool,
 };
 
 Item.defaultProps = {
@@ -36,6 +34,7 @@ Item.defaultProps = {
   onClick: () => null,
   isActive: false,
   className: null,
+  isDisabled: false,
 };
 
 export default Item;
