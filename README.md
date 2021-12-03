@@ -54,6 +54,7 @@ import Dropdown from 'react-multilevel-dropdown';
 |position|"left" | "right" | "top-right" | "top-left"|left|
 |buttonVariant|"primary"| "secondary"| "tertiary"| "special"| "special-success"| "dashed"|secondary|
 |isActive|boolean|false|
+ |openOnHover|boolean|false|
 |wrapperClassName|string|null|
 |buttonClassName|string|null|
 |menuClassName|string|null|
