@@ -26,7 +26,7 @@
     "url": "https://github.com/kontentino/react-multilevel-dropdown/issues"
   },
   "dependencies": {
-    "react-style-classes": "^2.0.2"
+    "react-style-classes": "^2.0.3"
   },
   "resolutions": {
     "babel-loader": "8.1.0"
@@ -62,29 +62,29 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-react": "^7.0.0",
-    "@storybook/addon-actions": "^5.3.13",
-    "@storybook/addon-docs": "^5.3.17",
-    "@storybook/addon-links": "^5.3.13",
-    "@storybook/addons": "^5.3.13",
+    "@babel/cli": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-docs": "^5.3.21",
+    "@storybook/addon-links": "^5.3.21",
+    "@storybook/addons": "^5.3.21",
     "@storybook/preset-create-react-app": "^1.5.2",
-    "@storybook/react": "^5.3.13",
-    "@testing-library/jest-dom": "^5.1.1",
-    "@testing-library/react": "^9.4.1",
+    "@storybook/react": "^5.3.21",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^9.5.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^25.1.0",
+    "babel-jest": "^25.5.1",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "jest": "^25.1.0",
-    "jest-css-modules-transform": "^4.0.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "jest": "^25.5.4",
+    "jest-css-modules-transform": "^4.3.0",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-scripts": "^4.0.3",
-    "react-test-renderer": "^16.13.0",
+    "react-test-renderer": "^16.14.0",
     "sass-loader": "^8.0.2"
   }
 }
