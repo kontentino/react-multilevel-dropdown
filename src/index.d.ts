@@ -1,6 +1,8 @@
 declare module "react-multilevel-dropdown" {
   import { ReactNode, FC } from "react";
 
+  type AnyFunction = (...e: any) => any
+
   const Dropdown: FC<{
     title?: ReactNode | ReactNode[];
     children?: ReactNode | ReactNode[];
