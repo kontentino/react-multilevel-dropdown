@@ -1,5 +1,5 @@
 declare module "react-multilevel-dropdown" {
-  import { ReactNode, FC } from "react";
+  import { ReactNode, FC, Ref } from "react";
 
   type AnyFunction = (...e: any) => any
 
@@ -21,6 +21,7 @@ declare module "react-multilevel-dropdown" {
     buttonClassName?: string;
     onClick?: (x?: any) => any | null;
     openOnHover?: boolean
+    ref?: Ref<undefined | { isOpen: boolean, dropdownRef: Element, toggle: AnyFunction }>
   }> & {
     Submenu: FC<{
       children?: ReactNode | ReactNode[];
