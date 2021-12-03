@@ -1,22 +1,33 @@
-declare module 'react-multilevel-dropdown' {
-  import { FC } from 'react';
+declare module "react-multilevel-dropdown" {
+  import { ReactNode, FC } from 'react';
 
   const Dropdown: FC<{
-    title?: any;
-    children?: any;
+    title?: ReactNode | ReactNode[];
+    children?: ReactNode | ReactNode[];
     isDisabled?: boolean;
-    position?: 'left' | 'right';
-    wrapperClassName?: string | null;
-    buttonClassName?: string | null;
-    menuClassName?: string | null;
+    position?: "left" | "right" | "top-right" | "top-left";
+    buttonVariant?:
+      | "primary"
+      | "secondary"
+      | "tertiary"
+      | "special"
+      | "special-success"
+      | "dashed";
+    isActive?: boolean;
+    wrapperClassName?: string;
+    menuClassName?: string;
+    buttonClassName?: string;
+    dataName?: string;
+    onClick?: (x?: any) => any | null;
+    buttonHtmlAttributes?: Record<any, any> | null;
   }> & {
     Submenu: FC<{
       children?: any;
-      position?: 'left' | 'right';
+      position?: "left" | "right";
       className?: string | null;
     }>;
     Divider: FC<{
-      size?: 'sm' | 'lg',
+      size?: "sm" | "lg";
     }>;
     Item: FC<{
       children?: any;
