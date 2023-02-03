@@ -1,6 +1,6 @@
 {
   "name": "react-multilevel-dropdown",
-  "version": "3.0.3",
+  "version": "4.0.0",
   "author": "Kontentino",
   "description": "ReactJS multilevel dropdown component",
   "private": false,
@@ -33,19 +33,15 @@
     "babel-loader": "8.1.0"
   },
   "peerDependencies": {
-    "react": "^16.12.0",
-    "react-scripts": "3.4.0",
-    "react-dom": "^16.12.0"
+    "react": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-dom": "^18.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf build && NODE_ENV=production babel src --out-dir build --copy-files && babel package.json -d build --copy-files",
     "test": "jest",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "predeploy": "npm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static",
-    "build-storybook": "build-storybook",
     "deploy": "cd build && npm publish",
     "lint": "eslint src/components/**/*.js"
   },
@@ -68,12 +64,6 @@
     "@babel/cli": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-react": "^7.0.0",
-    "@storybook/addon-actions": "^5.3.13",
-    "@storybook/addon-docs": "^5.3.17",
-    "@storybook/addon-links": "^5.3.13",
-    "@storybook/addons": "^5.3.13",
-    "@storybook/preset-create-react-app": "^1.5.2",
-    "@storybook/react": "^5.3.13",
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^9.4.1",
     "babel-eslint": "^10.1.0",
@@ -82,12 +72,12 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "jest": "^25.1.0",
     "jest-css-modules-transform": "^4.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^8.0.0",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "^4.0.3",
-    "react-test-renderer": "^16.13.0",
-    "sass-loader": "^8.0.2"
+    "react": "^18.0.2",
+    "react-dom": "^18.0.2",
+    "react-scripts": "^5.0.1",
+    "react-test-renderer": "^18.0.2",
+    "sass-loader": "^13.2.0"
   }
 }
