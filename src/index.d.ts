@@ -1,9 +1,7 @@
 declare module "react-multilevel-dropdown" {
-  import { ReactNode, FC } from "react";
+  import type { ReactNode, FC, MouseEvent } from "react";
 
-  type AnyFunction = (...e: any) => any
-
-  const Dropdown: FC<{
+   const Dropdown: FC<{
     title?: ReactNode | ReactNode[];
     children?: ReactNode | ReactNode[];
     isDisabled?: boolean;
@@ -33,7 +31,7 @@ declare module "react-multilevel-dropdown" {
     }>;
     Item: FC<{
       children?: ReactNode | ReactNode[];
-      onClick?: AnyFunction | null;
+      onClick?: (e: MouseEvent<HTMLLIElement>) => void;
       isActive?: boolean;
       className?: string;
       isDisabled?: boolean;
