@@ -22,7 +22,8 @@ const Dropdown = forwardRef(({
   openOnHover,
   ...props
 }, ref) => {
-  const [isOpen, setOpen] = useState(false);
+  const [requestedOpen, setOpen] = useState(false);
+  const isOpen = requestedOpen && !isDisabled;
   const dropdownRef = useRef();
 
   const handleClick = useCallback((e) => {
@@ -35,6 +36,13 @@ const Dropdown = forwardRef(({
   useEffect(() => () => {
     document.removeEventListener('mousedown', handleClick);
   }, []);
+
+  useEffect(() => {
+    if (isDisabled) {
+      setOpen(false);
+      document.removeEventListener('mousedown', handleClick);
+    }
+  }, [isDisabled, handleClick]);
 
   const handleButtonOnClick = (e) => {
     if (e) {
